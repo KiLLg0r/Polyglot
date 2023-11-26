@@ -1,6 +1,7 @@
 "use client";
 
 import "./globals.css";
+import "./blog.css";
 
 import Navigation from "@components/Navigation/navigation";
 import { usePathname } from "next/navigation";

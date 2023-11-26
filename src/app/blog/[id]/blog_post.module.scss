@@ -1,0 +1,24 @@
+.blog_post {
+  min-height: calc(100vh - 6rem);
+  padding-top: 6rem;
+
+  .blog_body {
+    margin-top: 2rem;
+  }
+
+  .author {
+    font-weight: 200;
+
+    span {
+      background: linear-gradient(
+        to right,
+        var(--clr-blue-500),
+        var(--clr-pink-500)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-style: italic;
+      font-weight: 600;
+    }
+  }
+}

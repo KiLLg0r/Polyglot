@@ -4,12 +4,7 @@
 import styles from "./sidebar.module.scss";
 
 // Icons
-import {
-  FaSquarePlus,
-  FaRegNewspaper,
-  FaArrowLeft,
-  FaBloggerB,
-} from "react-icons/fa6";
+import { FaSquarePlus, FaRegNewspaper, FaArrowLeft } from "react-icons/fa6";
 
 // React / Next
 import { useState } from "react";
@@ -28,11 +23,6 @@ const Sidebar = () => {
   });
 
   const links = [
-    {
-      name: "Blog",
-      icon: <FaBloggerB />,
-      path: "/blog",
-    },
     {
       name: "My blog posts",
       icon: <FaRegNewspaper />,

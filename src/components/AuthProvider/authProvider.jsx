@@ -28,6 +28,7 @@ const AuthChange = ({ children }) => {
       updateUser(user);
       setLoading(false);
       nookies.set(null, "username", user?.displayName, { path: "/" });
+      nookies.set(null, "email", user?.email, { path: "/" });
     });
 
     return unsubscribe;
