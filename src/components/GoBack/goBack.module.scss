@@ -1,0 +1,26 @@
+.goBack {
+  all: unset;
+  cursor: pointer;
+
+  margin-bottom: 1rem;
+
+  background: var(--clr-white-700);
+  color: var(--clr-black-700);
+
+  padding: 0.5rem 1rem;
+
+  font-size: 1.5rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  border-radius: 0.5rem;
+
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:hover {
+    background: var(--clr-black-50);
+    color: var(--clr-white-500);
+  }
+}

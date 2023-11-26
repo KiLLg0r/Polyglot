@@ -1,0 +1,61 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+
+  &__wrapper {
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    transform: translateY(-50%);
+
+    margin-inline: auto;
+
+    width: min(1200px, 90%);
+    max-height: 90%;
+
+    overflow: auto;
+
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background-color: var(--clr-black-700);
+    box-shadow:
+      0 1px 1px rgba(35, 35, 35, 0.02),
+      0 5px 4px rgba(35, 35, 35, 0.03),
+      0 12px 9px rgba(35, 35, 35, 0.05),
+      0 20px 15px rgba(35, 35, 35, 0.06),
+      0 32px 24px rgba(35, 35, 35, 0.08);
+  }
+
+  &__close {
+    all: unset;
+    cursor: pointer;
+
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+
+    font-size: 1.5rem;
+    color: var(--clr-white-900);
+
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    height: 1.5rem;
+    aspect-ratio: 1;
+
+    padding: 0.25rem;
+
+    border-radius: 50%;
+
+    &:hover {
+      color: var(--clr-white-500);
+      background: rgba(216, 216, 216, 0.1);
+    }
+  }
+}

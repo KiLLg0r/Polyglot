@@ -1,77 +1,4 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
-}
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 * {
   box-sizing: border-box;
@@ -79,20 +6,67 @@
   margin: 0;
 }
 
+body {
+  --clr-blue-900: #061b2c;
+  --clr-blue-800: #0c3758;
+  --clr-blue-700: #135283;
+  --clr-blue-600: #196eaf;
+  --clr-blue-500: #1f89db;
+  --clr-blue-400: #4ca1e2;
+  --clr-blue-300: #79b8e9;
+  --clr-blue-200: #a5d0f1;
+  --clr-blue-100: #d2e7f8;
+
+  --clr-pink-900: #31081c;
+  --clr-pink-800: #621138;
+  --clr-pink-700: #921953;
+  --clr-pink-600: #c3226f;
+  --clr-pink-500: #f42a8b;
+  --clr-pink-400: #f655a2;
+  --clr-pink-300: #f87fb9;
+  --clr-pink-200: #fbaad1;
+  --clr-pink-100: #fdd4e8;
+
+  --clr-black-900: #121212;
+  --clr-black-800: #1e1e1e;
+  --clr-black-700: #222222;
+  --clr-black-600: #242424;
+  --clr-black-500: #272727;
+  --clr-black-400: #2c2c2c;
+  --clr-black-300: #2e2e2e;
+  --clr-black-200: #333333;
+  --clr-black-100: #353535;
+  --clr-black-50: #383838;
+
+  --clr-white-900: #f8f8f8;
+  --clr-white-800: #dfdfdf;
+  --clr-white-700: #c6c6c6;
+  --clr-white-600: #aeaeae;
+  --clr-white-500: #959595;
+  --clr-white-400: #7c7c7c;
+  --clr-white-300: #636363;
+  --clr-white-200: #4a4a4a;
+  --clr-white-100: #323232;
+
+  --clr-error: #c92b2b;
+  --clr-error-dark: #8d1e1e;
+
+  background-color: var(--clr-black-900);
+}
+
 html,
 body {
   max-width: 100vw;
+  max-height: 100vh;
   overflow-x: hidden;
+  font-family: "JetBrains Mono", monospace;
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--clr-white-900);
+  cursor: url("data:image/svg+xml,%3Csvg stroke='%23f0f0f0' fill='%23e8e8e8' stroke-width='0' viewBox='0 0 448 512' height='1.5em' width='1.5em' xmlns='http://www.w3.org/2000/svg' transform='scale(-1 1)'%3E%3Cpath d='M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8S32.7 256 48 256h176v176c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z' stroke='none'/%3E%3C/svg%3E%0A"),
+    auto;
 }
 
 a {
@@ -100,8 +74,26 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding: 2rem;
+}
+
+.wrapper {
+  overflow: hidden auto;
+  position: relative;
+  max-height: 100vh;
+}
+
+body.hidden {
+  overflow: hidden;
+
+  .wrapper,
+  .container {
+    overflow: hidden;
   }
 }
