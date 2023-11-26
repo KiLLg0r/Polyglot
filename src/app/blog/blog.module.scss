@@ -1,4 +1,14 @@
 .blog {
   min-height: calc(100vh - 6rem);
   padding-top: 6rem;
+
+  h1 {
+    padding-bottom: 1rem;
+  }
+
+  .blog__posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 1rem;
+  }
 }

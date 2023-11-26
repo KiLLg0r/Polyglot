@@ -1,0 +1,11 @@
+.myPosts {
+  h1 {
+    padding-bottom: 1rem;
+  }
+
+  .myPosts__posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 1rem;
+  }
+}

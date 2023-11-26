@@ -1,0 +1,52 @@
+.post {
+  width: 20rem;
+  background: var(--clr-black-200);
+  border-radius: 1rem;
+  display: block;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  padding: 0.5rem;
+
+  &:hover {
+    box-shadow: 0.5rem 0.5rem 0 var(--clr-white-300);
+  }
+
+  &__title,
+  &__author_email,
+  &__author {
+    padding: 0.5rem;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: transparent;
+    border: none;
+    border-radius: 0.75rem;
+    color: var(--clr-white-900);
+  }
+
+  &__author_email {
+    font-size: 0.865rem;
+    font-weight: 200;
+    padding-top: 0;
+
+    span {
+      font-style: italic;
+    }
+  }
+
+  &__author {
+    padding-block: 0;
+
+    span {
+      background: linear-gradient(
+        to right,
+        var(--clr-blue-500),
+        var(--clr-pink-500)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-style: italic;
+    }
+  }
+}
