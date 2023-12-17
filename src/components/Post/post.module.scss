@@ -2,10 +2,11 @@
   width: 18rem;
   background: var(--clr-black-200);
   border-radius: 1rem;
-  display: block;
+  display: flex;
+  flex-direction: column;
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   padding: 0.5rem;
-  height: fit-content;
+  height: 100%;
 
   &:hover {
     box-shadow: 0.5rem 0.5rem 0 var(--clr-white-300);
@@ -16,7 +17,7 @@
       grid-row: span #{$i};
     }
   }
-  
+
   &__title,
   &__author_email,
   &__author {
@@ -45,6 +46,7 @@
 
   &__author {
     padding-block: 0;
+    margin-top: auto;
 
     span {
       background: linear-gradient(
@@ -56,5 +58,54 @@
       -webkit-text-fill-color: transparent;
       font-style: italic;
     }
+  }
+
+  .btn_group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: auto;
+
+    .btn {
+      flex: 1;
+      padding: 0.5rem 1rem;
+      border-radius: 1.5rem;
+      font-size: 0.865rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--clr-white-900);
+      border: none;
+      transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      text-align: center;
+
+      &.btn_primary {
+        background: var(--clr-blue-600);
+
+        &:hover {
+          background: var(--clr-blue-800);
+        }
+      }
+
+      &.btn_delete {
+        background: var(--clr-error);
+
+        &:hover {
+          background: var(--clr-error-dark);
+        }
+      }
+    }
+  }
+
+  .post__img {
+    margin-top: -0.5rem;
+    margin-inline: -0.5rem;
+    aspect-ratio: 16/9;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border-radius: 1rem 1rem 0 0;
   }
 }

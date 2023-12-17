@@ -25,4 +25,15 @@
       font-weight: 600;
     }
   }
+
+  .img_preview {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
 }

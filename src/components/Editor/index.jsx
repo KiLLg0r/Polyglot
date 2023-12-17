@@ -60,7 +60,7 @@ const editorConfig = {
   ],
 };
 
-export default function Editor() {
+export default function Editor({ content = "" }) {
   const [isMounted, setIsMounted] = useState(false);
   const updateBody = usePostStore((state) => state.updateBody);
 
@@ -90,7 +90,7 @@ export default function Editor() {
           <MarkdownShortcutPlugin transformers={TRANSFORMERS} />
           <HtmlPlugin
             onHtmlChanged={(html) => updateBody(html)}
-            initialHtml=""
+            initialHtml={content}
           />
         </div>
       </div>

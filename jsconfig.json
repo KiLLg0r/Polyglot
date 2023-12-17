@@ -1,30 +1,14 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@components/*": [
-        "./src/components/*"
-      ],
-      "@appwrite": [
-        "./src/appwrite.tsx"
-      ],
-      "@auth": [
-        "./src/context/auth.tsx"
-      ],
-      "@styles/*": [
-        "./src/styles/*"
-      ],
-      "@firebase": [
-        "./src/firebase.js"
-      ],
-      "@authStore": [
-        "./src/context/auth.js"
-      ],
-      "@errors": [
-        "./src/errors.js"
-      ]
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@appwrite": ["./src/appwrite.tsx"],
+      "@auth": ["./src/context/auth.tsx"],
+      "@styles/*": ["./src/styles/*"],
+      "@firebase": ["./src/firebase.js"],
+      "@authStore": ["./src/context/auth.js"],
+      "@errors": ["./src/errors.js"]
     }
   }
 }

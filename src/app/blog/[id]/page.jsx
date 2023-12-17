@@ -16,7 +16,11 @@ const BlogPost = async ({ params }) => {
 
   return (
     <div className={styles.blog_post}>
-      <GoBack path={"/blog"} />
+      <GoBack />
+      <div
+        className={styles.img_preview}
+        style={{ backgroundImage: `url(${post.img})` }}
+      />
       <h1>{post.title}</h1>
       <h4 className={styles.author}>
         Author: <span>{post.author}</span>

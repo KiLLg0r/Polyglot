@@ -1,40 +1,29 @@
 "use client";
 
-// Components
-import Editor from "@components/Editor";
+import PostEditor from "@components/PostEditor/postEditor";
+
+import {
+  addDoc,
+  arrayUnion,
+  collection,
+  doc,
+  getDoc,
+  serverTimestamp,
+  setDoc,
+  updateDoc,
+} from "firebase/firestore";
+import { db } from "@firebase";
 import usePostStore from "@/context/post";
 import useAuthStore from "@authStore";
 import { useRouter } from "next/navigation";
 
-// Styles
-import styles from "./new-post.module.scss";
-
-import { useState } from "react";
-
-// Firebase
-import {
-  collection,
-  addDoc,
-  setDoc,
-  doc,
-  getDoc,
-  updateDoc,
-  arrayUnion,
-  serverTimestamp,
-} from "firebase/firestore";
-import { db } from "@firebase";
-
 const NewPost = () => {
-  const [width, setWidth] = useState(16);
   const postBody = usePostStore((state) => state.postBody);
   const updateBody = usePostStore((state) => state.updateBody);
   const user = useAuthStore((state) => state.user);
   const router = useRouter();
-  const changeHandler = (evt) => {
-    setWidth(evt.target.value.length);
-  };
 
-  const post = async (e) => {
+  const createNewPost = async (e, id = null, img = "") => {
     e.preventDefault();
 
     try {
@@ -52,6 +41,7 @@ const NewPost = () => {
         author: user.displayName,
         authorEmail: user.email,
         createDate: serverTimestamp(),
+        img: img,
       });
 
       await updateDoc(docRef, {
@@ -65,21 +55,7 @@ const NewPost = () => {
     }
   };
 
-  return (
-    <div className={styles.new_post}>
-      <form onSubmit={post}>
-        <input
-          required={true}
-          placeholder="New post title"
-          className={styles.new_post__title}
-          onChange={changeHandler}
-          style={{ width: width + "ch" }}
-        />
-        <button type={"submit"}>Post</button>
-      </form>
-      <Editor />
-    </div>
-  );
+  return <PostEditor onSubmit={createNewPost} />;
 };
 
 export default NewPost;

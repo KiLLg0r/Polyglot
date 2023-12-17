@@ -9,7 +9,7 @@ const Blog = () => {
   return (
     <main className={styles.blog}>
       <input type="hidden" value={name.value} />
-      <h1>Blogs</h1>
+      <h1>Blog posts</h1>
       <div className="blog__posts">
         <Posts email={null} />
       </div>
