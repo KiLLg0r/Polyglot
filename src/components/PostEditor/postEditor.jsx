@@ -114,7 +114,10 @@ const PostEditor = ({
       <div
         className={styles.img_preview}
         style={{
-          backgroundImage: `${base64img.length > 0 && `url(${base64img})`}`,
+          backgroundImage:
+            base64img.length > 0
+              ? `url(${base64img})`
+              : img.length > 0 && `url(${img})`,
         }}
       >
         <label htmlFor="img">
