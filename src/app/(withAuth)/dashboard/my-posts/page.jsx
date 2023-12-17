@@ -9,7 +9,7 @@ const MyPosts = () => {
   return (
     <main className={styles.myPosts}>
       <h1>My Posts</h1>
-      <div className={styles.myPosts__posts}>
+      <div className="blog__posts">
         <Posts email={email.value} />
       </div>
     </main>

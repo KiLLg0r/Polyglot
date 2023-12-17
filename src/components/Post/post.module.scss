@@ -1,15 +1,22 @@
 .post {
-  width: 20rem;
+  width: 18rem;
   background: var(--clr-black-200);
   border-radius: 1rem;
   display: block;
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   padding: 0.5rem;
+  height: fit-content;
 
   &:hover {
     box-shadow: 0.5rem 0.5rem 0 var(--clr-white-300);
   }
 
+  @for $i from 1 through 10 {
+    &.post_#{$i} {
+      grid-row: span #{$i};
+    }
+  }
+  
   &__title,
   &__author_email,
   &__author {
@@ -23,6 +30,7 @@
     border: none;
     border-radius: 0.75rem;
     color: var(--clr-white-900);
+    word-break: break-all;
   }
 
   &__author_email {

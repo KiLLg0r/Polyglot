@@ -97,3 +97,10 @@ body.hidden {
     overflow: hidden;
   }
 }
+
+.blog__posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-auto-rows: minmax(7.5rem, auto);
+  grid-gap: 1rem;
+}
